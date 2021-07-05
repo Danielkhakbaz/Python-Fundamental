@@ -2,6 +2,7 @@ import random
 from rockPaperScissor_art import rock, paper, scissors
 
 def show_the_hand(choose):
+    """Return a image due to its condition"""
     if choose == 0:
         return rock
     elif choose == 1:
