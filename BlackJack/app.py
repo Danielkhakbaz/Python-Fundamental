@@ -9,6 +9,7 @@ dealer_cards = []
 
 
 def game_detector():
+    """Return the result of the game based of the cards"""
     if sum(user_cards) == sum(dealer_cards):
         return "! DRAW !"
     elif (sum(dealer_cards) > 21) or (sum(user_cards) > sum(dealer_cards)) or (sum(user_cards) == 21):
