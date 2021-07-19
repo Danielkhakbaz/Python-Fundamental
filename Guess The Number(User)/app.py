@@ -8,8 +8,6 @@ difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
 
 shots = 10 if difficulty == "easy" else 5
 
-print(number)
-
 for shot in range(1, shots + 1):
     print(f"You have {shots} attempts remaining to guess the number.")
 
