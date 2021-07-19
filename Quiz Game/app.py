@@ -2,6 +2,7 @@ from questions_and_answers import QUESTIONS_AND_ANSWERS
 
 
 def correct():
+    """Return a string which is 'Correct!' to show the user that he got the right answer! and also this function adds the score variable's value based on correct answers"""
     global score
     score = 0
 
@@ -11,6 +12,8 @@ def correct():
 
 
 def incorrect():
+    """Return a string which is 'Correct!' to show the user that he did not get the right answer!"""
+
     return "Incorrect!"
 
 
