@@ -8,7 +8,7 @@ difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
 
 shots = 10 if difficulty == "easy" else 5
 
-for shot in range(1, shots + 1):
+for shot in range(shots):
     print(f"You have {shots} attempts remaining to guess the number.")
 
     guess = int(input("Make your guess: "))
