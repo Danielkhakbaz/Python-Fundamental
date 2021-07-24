@@ -23,6 +23,10 @@ while to_be_continue:
 
     operation = input("Pick an operation: ")
 
+    if operation not in OPERATORS:
+        print("!!! YOU DID NOT CHOOSE AN OPERATION !!!")
+        quit()
+
     second_number = int(input("Enter the second number: "))
 
     print(f"{first_number} {operation} {second_number} = {calculate(first_number, operation, second_number)}")
