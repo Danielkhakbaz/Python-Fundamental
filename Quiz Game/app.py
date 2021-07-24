@@ -28,9 +28,9 @@ if playing != "y":
 print("OK! Let's play!")
 
 for QUESTION_AND_ANSWER in QUESTIONS_AND_ANSWERS:
-    answer = input(QUESTION_AND_ANSWER["question"]).lower()
+    answer = input(QUESTION_AND_ANSWER.get("question")).lower()
 
-    if answer == QUESTION_AND_ANSWER["answer"]:
+    if answer == QUESTION_AND_ANSWER.get("answer"):
         print(correct())
     else:
         print(incorrect())
