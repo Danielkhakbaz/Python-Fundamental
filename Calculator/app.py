@@ -1,5 +1,6 @@
+OPERATORS = ["+", "-", "*", "/"]
+
 to_be_continue = True
-operators = ["+", "-", "*", "/"]
 
 
 def calculate(first_number, operation, second_number):
@@ -16,7 +17,7 @@ def calculate(first_number, operation, second_number):
 first_number = int(input("Enter the first number: "))
 
 while to_be_continue:
-    for operator in operators:
+    for operator in OPERATORS:
         print(operator)
 
     operation = input("Pick an operation: ")
