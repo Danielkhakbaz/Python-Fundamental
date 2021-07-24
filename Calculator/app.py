@@ -4,6 +4,7 @@ to_be_continue = True
 
 
 def calculate(first_number, operation, second_number):
+    """Returns the result of operated numbers"""
     if operation == "+":
         return first_number + second_number
     elif operation == "-":
