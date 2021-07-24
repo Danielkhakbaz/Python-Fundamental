@@ -7,12 +7,14 @@ word = []
 choosen_word = random.choice(WORD_LIST)
 
 print(LOGO)
+print(choosen_word)
 
 for _ in range(len(choosen_word)):
     word.append("_")
 
 while lives != 0:
     if "_" not in word:
+        print("You win!")
         quit()
 
     guess = input("Guess a letter: ").lower()
