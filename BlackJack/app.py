@@ -24,7 +24,7 @@ for _ in range(2):
 
 print(logo)
 print(f"Your cards: {user_cards} -> {sum(user_cards)}")
-print(f"Dealer's first card: {dealer_cards.get[0]}")
+print(f"Dealer's first card: {dealer_cards[0]}")
 
 while (not game_is_over) and (choice == "y"):
     if sum(user_cards) == 21:
