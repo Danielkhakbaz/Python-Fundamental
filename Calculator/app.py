@@ -1,10 +1,21 @@
 OPERATORS = ["+", "-", "*", "/"]
 
-to_be_continue = True
+dani = "y"
 
 
 def calculate(first_number, operation, second_number):
-    """Returns the result of operated numbers"""
+    """
+    Calculate the numbers based on the operation which user entered.
+
+    Parameters: 
+    first_number (num): The first number which is going to be calculated
+    operation (str): The operation that user enter based on their needs
+    second_number (num): The second number which is going to be calculated
+
+    Returns
+    num: The result of the operated numbers
+    """
+
     if operation == "+":
         return first_number + second_number
     elif operation == "-":
@@ -17,21 +28,25 @@ def calculate(first_number, operation, second_number):
 
 first_number = int(input("Enter the first number: "))
 
-while to_be_continue:
+while (dani == "y") or (dani == "n"):
     for operator in OPERATORS:
         print(operator)
 
     operation = input("Pick an operation: ")
 
     if operation not in OPERATORS:
-        print("!!! YOU DID NOT CHOOSE AN OPERATION !!!")
-        quit()
+        break
 
     second_number = int(input("Enter the second number: "))
 
     print(f"{first_number} {operation} {second_number} = {calculate(first_number, operation, second_number)}")
 
-    if input(f"Type 'y' to continue calculating with {calculate(first_number, operation, second_number)}, or type 'n' to start a new calculation: ").lower() == "y":
+    dani = input(
+        f"Type 'y' to continue calculating with {calculate(first_number, operation, second_number)}, or type 'n' to stop the calculator: ").lower()
+
+    if dani == "y":
         first_number = calculate(first_number, operation, second_number)
-    else:
-        to_be_continue = False
+    elif dani == "n":
+        quit()
+
+print("You entered an unvalid choice!")

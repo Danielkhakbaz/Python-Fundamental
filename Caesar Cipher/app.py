@@ -1,23 +1,34 @@
-from alphabet import alphabet
-from art import logo
+from alphabet import ALPHABET
+from art import LOGO
 
 again = "yes"
 
 
 def encrypt_and_decrypt(message, shift_number):
-    """Return a coded string based on the user's want"""
+    """
+    Convert the plain text to a coded text with the use of shift_number.
+
+    Parameters:
+    message (str): The text that is going to be coded
+    shift_number (num): A number of moving characters in our coded text
+
+    Returns:
+    str: A coded string based on the user's want
+    """
+
     code = ""
 
     for letter in message:
-        code += alphabet[alphabet.index(
-            letter) + shift_number] if choice == "encode" else alphabet[alphabet.index(letter) - shift_number]
+        if letter != " ":
+            code += ALPHABET[ALPHABET.index(
+                letter) + shift_number] if choice == "encode" else ALPHABET[ALPHABET.index(letter) - shift_number]
 
     return code
 
 
-print(logo)
+print(LOGO)
 
-while (again == "yes") or (not "no"):
+while (again == "yes") or (again == "no"):
     choice = input("Type 'encode' to encrypt, type 'decode' to decrypt: ")
 
     if (choice != "encode") and (choice != "decode"):
@@ -31,3 +42,5 @@ while (again == "yes") or (not "no"):
 
     again = input(
         "Type 'yes' if you want to go again. Otherwise type 'no': ").lower()
+
+print("You entered a unvalid choice!")
