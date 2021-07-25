@@ -6,10 +6,13 @@ goal_with_date = input(
 goal, date = goal_with_date.split(", ")
 [day, month, year] = map(int, date.split("."))
 
-today = datetime.date.today()
 someday = datetime.date(year, month, day)
+today = datetime.date.today()
 
-diffrence = today - someday
+diffrence_in_days = (someday - today).days
 
-print(
-    f"Dear user! Time remaining for your goal: {goal} is {diffrence.days} days.")
+if diffrence_in_days > 0:
+    print(
+        f"Dear user! Time remaining for your goal: {goal} is {diffrence_in_days} days.")
+else:
+    print("You entered an unvalid date!")
