@@ -4,7 +4,7 @@ from art import LOGO
 again = "yes"
 
 
-def encrypt_and_decrypt(message, shift_number):
+def encrypt_and_decrypt(message: str, shift_number: int) -> str:
     """
     Convert the plain text to a coded text with the use of shift_number.
 
