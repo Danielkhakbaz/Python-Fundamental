@@ -2,7 +2,7 @@ import random
 from rockPaperScissor_art import ROCK, PAPER, SCISSORS
 
 
-def show_the_hand(choose):
+def show_the_hand(choose: int) -> str:
     """
     Return a image based on the user's choice(0 for rock, 1 for paper and 2 for scissors).
 
@@ -21,7 +21,7 @@ def show_the_hand(choose):
         return SCISSORS
 
 
-def detect_the_winner(user_choice, computer_choice):
+def detect_the_winner(user_choice: int, computer_choice: int) -> str:
     """
     Return a string for specifying the situation of the game(Draw, Win and Lose).
 

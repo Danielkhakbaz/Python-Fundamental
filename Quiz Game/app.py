@@ -17,17 +17,6 @@ def correct():
     return "Correct!"
 
 
-def incorrect():
-    """
-    Return a string which is "Incorrect!" to show the user that he did not get the right answer.
-
-    Returns
-    str: The "Incorrect!" string to show that the user did not get the right answer
-    """
-
-    return "Incorrect!"
-
-
 print("! Welcome to my Computer Quiz Game !")
 
 want_to_play = input(
@@ -44,6 +33,6 @@ for QUESTION_AND_ANSWER in QUESTIONS_AND_ANSWERS:
     if answer == QUESTION_AND_ANSWER.get("answer"):
         print(correct())
     else:
-        print(incorrect())
+        print("Incorrect!")
 
 print(f"You got {score} Questions right!")
