@@ -1,9 +1,9 @@
 OPERATORS = ["+", "-", "*", "/"]
 
-dani = "y"
+again = "y"
 
 
-def calculate(first_number, operation, second_number):
+def calculate(first_number: float, operation: str, second_number: float) -> float:
     """
     Calculate the numbers based on the operation which user entered.
 
@@ -28,7 +28,7 @@ def calculate(first_number, operation, second_number):
 
 first_number = int(input("Enter the first number: "))
 
-while (dani == "y") or (dani == "n"):
+while again == "y":
     for operator in OPERATORS:
         print(operator)
 
@@ -41,12 +41,13 @@ while (dani == "y") or (dani == "n"):
 
     print(f"{first_number} {operation} {second_number} = {calculate(first_number, operation, second_number)}")
 
-    dani = input(
+    again = input(
         f"Type 'y' to continue calculating with {calculate(first_number, operation, second_number)}, or type 'n' to stop the calculator: ").lower()
 
-    if dani == "y":
+    if again == "y":
         first_number = calculate(first_number, operation, second_number)
-    elif dani == "n":
-        quit()
+
+if again == "n":
+    quit()
 
 print("You entered an unvalid choice!")
