@@ -1,8 +1,9 @@
 import random
 
-low = 1
-high = int(input("Enter the maximum number inside your mind: "))
 feedback = ""
+low = 1
+
+high = int(input("Enter the maximum number inside your mind: "))
 
 while feedback != "c":
     guessed_number = random.randint(low, high)
