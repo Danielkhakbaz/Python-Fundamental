@@ -16,19 +16,15 @@ def encrypt_and_decrypt(message, shift_number):
     str: A coded string based on the user's want
     """
 
-    code = ""
-
-    for letter in message:
-        if letter != " ":
-            code += ALPHABET[ALPHABET.index(
-                letter) + shift_number] if choice == "encode" else ALPHABET[ALPHABET.index(letter) - shift_number]
+    code = "".join([ALPHABET[ALPHABET.index(
+        letter) + shift_number] if choice == "encode" else ALPHABET[ALPHABET.index(letter) - shift_number] for letter in message if letter])
 
     return code
 
 
 print(LOGO)
 
-while (again == "yes") or (again == "no"):
+while again == "yes":
     choice = input("Type 'encode' to encrypt, type 'decode' to decrypt: ")
 
     if (choice != "encode") and (choice != "decode"):
@@ -42,5 +38,8 @@ while (again == "yes") or (again == "no"):
 
     again = input(
         "Type 'yes' if you want to go again. Otherwise type 'no': ").lower()
+
+if again == "no":
+    quit()
 
 print("You entered a unvalid choice!")
