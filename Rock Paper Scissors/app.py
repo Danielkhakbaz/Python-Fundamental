@@ -3,7 +3,16 @@ from rockPaperScissor_art import ROCK, PAPER, SCISSORS
 
 
 def show_the_hand(choose):
-    """Return a image due to its condition"""
+    """
+    Return a image based on the user's choice(0 for rock, 1 for paper and 2 for scissors).
+
+    Parameters:
+    choose (num): A number which we asked user to enter
+
+    Returns
+    str: The right image based on the user's choice
+    """
+
     if choose == 0:
         return ROCK
     elif choose == 1:
@@ -13,12 +22,22 @@ def show_the_hand(choose):
 
 
 def detect_the_winner(user_choice, computer_choice):
-    """Return a string for specifying the situation of the game(Draw, Win and Lose)"""
+    """
+    Return a string for specifying the situation of the game(Draw, Win and Lose).
+
+    Parameters:
+    user_choice (num): a Number user entered based on their intrest between 0 and 2
+    computer_choice (num): a Number which was maufactored randomly with random module
+
+    Returns
+    str: a String that shows us the final result of the game
+    """
+
     if user_choice == computer_choice:
         return "DRAW!"
     elif (computer_choice == 2) and (user_choice == 0):
         return "YOU WIN!"
-    elif computer_choice == 0 and (user_choice == 2):
+    elif (computer_choice == 0) and (user_choice == 2):
         return "YOU LOSE!"
     elif computer_choice > user_choice:
         return "YOU LOSE!"
@@ -30,6 +49,7 @@ def detect_the_winner(user_choice, computer_choice):
 
 user_choice = int(
     input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors: "))
+
 computer_choice = random.randint(0, 2)
 
 print(f"User's choice:\n{show_the_hand(user_choice)}")

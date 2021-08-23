@@ -6,4 +6,6 @@ for index, letter in enumerate(sentence):
     if letter in VOWELS:
         sentence[index] = "."
 
-print("".join(sentence).lower())
+sentence = "".join(sentence).lower()
+
+print(sentence)
