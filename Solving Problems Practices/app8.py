@@ -20,6 +20,7 @@ for value in balance:
         value[1] = int(value[1]) * -1
     else:
         totals.append(value[1])
+
     total += int(value[1])
 
 print(f"The Total is {total}.")
