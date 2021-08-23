@@ -1,8 +1,9 @@
 import random
 
-number = random.randint(1, 100)
+NUMBER = random.randint(1, 100)
 
-print("Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100.")
+print("Welcome to the Number Guessing Game!")
+print("I'm thinking of a number between 1 and 100.")
 
 difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
 
@@ -13,10 +14,11 @@ for shot in range(shots):
 
     guess = int(input("Make your guess: "))
 
-    if guess == number:
+    if guess == NUMBER:
         print("GOT IT!")
-        break
-    elif guess > number:
+
+        quit()
+    elif guess > NUMBER:
         print("HIGH")
     else:
         print("LOW")
