@@ -1,11 +1,16 @@
-from turtle import Turtle, Screen
+class Dog:
+    def __init__(self, name):
+        self.name = name
 
-my_turtle = Turtle()
-my_screen = Screen()
+    def add_one(self, number):
+        print(number + 1)
+        print(self.name)
 
-my_turtle.shape("turtle")
-my_turtle.color("red")
+    def minus_one(self, number):
+        return number - 1
 
-my_turtle.forward(100)
 
-my_screen.exitonclick()
+a = Dog("Dani")
+b = Dog("Bezi")
+
+a.add_one(1)
