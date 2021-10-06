@@ -1,9 +1,24 @@
 from resources import resources
 from menu import MENU
 
+total = 0
 is_on = True
 is_it_sufficient = []
 menu = ["espresso", "latte", "cappuccino"]
+
+
+def process_the_coins():
+    global total
+
+    print("Insert the coins!")
+
+    total += int(input("How many pennies: ")) * 0.01
+    total += int(input("How many nickles: ")) * 0.05
+    total += int(input("How many dimes: ")) * 0.1
+    total += int(input("How many quarters: ")) * 0.25
+
+    return total
+
 
 while is_on:
     choice = input("What would you like? (espresso, latte, cappuccino): ")
@@ -31,3 +46,8 @@ while is_on:
                 print(f"Sorry there is not enough {item_menu.capitalize()}.")
 
                 is_on = False
+
+        # Processing the coins
+        if is_on:
+            print(
+                f"Total money: {process_the_coins()}")
